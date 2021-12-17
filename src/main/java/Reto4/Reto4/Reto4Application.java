@@ -5,6 +5,7 @@ import Reto4.Reto4.mongoRepository.SupplementsMongoRepository;
 import Reto4.Reto4.mongoRepository.UserMongoRepository;
 import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
+import java.util.TimeZone;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -32,6 +33,7 @@ public class Reto4Application implements CommandLineRunner {
         public void run(String... args) throws Exception {
         SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd");
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        ft.setTimeZone(TimeZone.getTimeZone("America/Bogota"));
         Supplementsrepo.deleteAll();
         Userrepo.deleteAll();
         Orderrepo.deleteAll();

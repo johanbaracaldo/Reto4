@@ -7,6 +7,7 @@ package Reto4.Reto4.service;
 
 import Reto4.Reto4.Repository.OrderRepository;
 import Reto4.Reto4.model.Order;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -92,5 +93,9 @@ public class OrderService {
     public List<Order> getByRegisterDayAndSalesManId(String registerDay, Integer id){
         return orderRepository.getByRegisterDayAndSalesManId(registerDay, id);
     }
+
+ 
+
+  
 
 }
